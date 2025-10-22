@@ -71,3 +71,53 @@ mi-ip-que-tenga:8080
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 Laboratorios del modulo IV Practica 2
+
+sudo apt install postfix -y
+
+sudo apt install mailutils -y
+
+sudo dpkg-reconfigure postfix
+
+$myhostname, localhost.$mydomain, localhost
+
+sudo nano /etc/postfix/sasl/sasl_passwd 
+
+[smtp.gmail.com]:587 micorreo]
+
+sudo postmap /etc/postfix/sasl/sasl_passwd
+
+ls
+
+ls /etc/postfix/sasl/sasl_passwd
+
+sudo chmod 600 /etc/postfix/sasl/sasl_passwd
+
+sudo chmod 600 /etc/postfix/sasl/sasl_passwd.db
+
+ls /etc/postfix/sasl/
+
+sudo nano /etc/postfix/main.cf
+
+relayhost = [smtp.gmail.com]:587
+
+smtp_use_tls = yes
+smtp_tls_note_starttls_offer = yes
+smtp_sasl_auth_enable = yes
+smtp_sasl_password_maps = hash:/etc/postfix/sasl/sasl_passwd
+smtp_sasl_security_options = noanonymous
+smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
+
+sudo systemctl restart postfix
+
+sudo systemctl status postfix
+
+echo "Fernando Matos\nMatricula: 20242332" | mail -s "MambruSeFueALaGuerra" correodeprueba
+
+
+echo "Fernando Matos\nMatricula: 20242332" | mail -s "MambruSeFueALaGuerra" correodelprofesor
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
