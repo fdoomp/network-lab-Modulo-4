@@ -119,5 +119,25 @@ echo "Fernando Matos\nMatricula: 20242332" | mail -s "MambruSeFueALaGuerra" corr
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Laboratorios del modulo IV Practica 3
+
+
+sudo apt install cups
+
+sudo systemctl status cups 
+
+sudo apt install epel-release -y 
+
+sudo apt install cups-pdf 
+
+localhost:631/
+
+cups-pdf (virtual pdf printer)
+
+Make: Generic 
+
+Model: Generic CUPS-PDF Printer (w/options) (en)
+
+192.168.1.11:651
 
 
